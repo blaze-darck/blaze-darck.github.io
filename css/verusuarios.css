@@ -1,0 +1,76 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Estilo del contenedor principal */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 12px;
+    font-size: 1em;
+    text-align: left;
+    border-bottom: 2px solid #0064cc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0f7ff;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+/* Estilo de las celdas */
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo de mensajes */
+p {
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+}

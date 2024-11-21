@@ -1,0 +1,52 @@
+.shop{
+    background-image: url('img/bg.jpg');
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+}
+.shop .row{
+    display: flex;
+    justify-content: space-evenly;
+}
+.shop .row .top-footer{
+    margin-top: 2rem;
+    text-align: center!important;
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    padding: 3rem 1rem;
+}
+.shop .box-container{
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+.shop .box-container .box{
+    margin: 1rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    background-color: #fff;
+}
+.shop .box-container img{
+    width: 100%;
+}
+.shop .btn{
+    position: absolute;
+    left: 30%;
+    bottom: -3%;
+}
+.shop-category .box{
+    position: relative;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.shop-category .detail{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    line-height: 2;
+    text-align: center;
+}
+.shop-category .detail h1{
+    font-size: 2em;
+}
+.shop-category .detail span{
+    font-size: 1.3rem;
+
+}

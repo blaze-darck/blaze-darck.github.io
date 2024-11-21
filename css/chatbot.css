@@ -1,0 +1,201 @@
+/* Estilos del contenedor del chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: -300px; /* Inicialmente escondido hacia abajo */
+    right: 20px;
+    width: 350px; /* Más ancho */
+    max-height: 600px; /* Aumentamos la altura máxima */
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: bottom 0.4s ease; /* Efecto de deslizamiento suave */
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+}
+
+.chatbot-container.open {
+    bottom: 0; /* Muestra el chatbot al desplazarlo hacia arriba */
+}
+
+/* Estilos del contenido principal */
+.chat-content {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 400px;
+    flex: 1;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    color: #333;
+    line-height: 1.6; /* Aumentamos el espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Estilos para los mensajes de chat */
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aumentamos el espacio entre los mensajes */
+    overflow-y: auto;
+    max-height: 300px; /* Ajustamos la altura máxima */
+    padding-right: 10px;
+    scrollbar-width: thin;
+    padding-top: 30px;
+}
+
+#chat-messages p {
+    margin: 0;
+    padding: 10px 15px; /* Aumentamos el padding para mejorar la legibilidad */
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+}
+
+#chat-messages p.user-message {
+    background-color: #DCF8C6; /* Verde claro para el usuario */
+    align-self: flex-end;
+    text-align: right;
+}
+
+#chat-messages p.bot-message {
+    background-color: #F1F0F0; /* Gris claro para el bot */
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Estilo para el campo de entrada de texto */
+#chat-input {
+    width: calc(100% - 60px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+}
+
+/* Estilo del botón de enviar */
+#send-btn {
+    width: 60px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+}
+
+/* Estilo del botón de cerrar */
+#close-chatbot-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    font-weight: bold;
+}
+
+/* Estilos para los botones de selección de categoría */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Aumentamos el espacio entre los botones */
+    padding: 15px 0;
+}
+
+.category-button {
+    padding: 12px 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #45a049;
+}
+/* Estilo para las opciones de Delivery y Comida */
+.option-button {
+    padding: 15px 25px;
+    background-color: #4CAF50; /* Color verde para las opciones */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+/* Efecto cuando el usuario pasa el mouse sobre las opciones de Delivery y Comida */
+.option-button:hover {
+    background-color: #45a049; /* Color verde más oscuro */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+/* Estilo para los botones de las categorías */
+.category-button {
+    padding: 12px 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 48%; /* Hacemos que los botones sean más pequeños para que quepan en dos filas */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Efecto cuando el usuario pasa el mouse sobre las categorías */
+.category-button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+/* Estilo para los productos dentro de cada categoría */
+.product-button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Color azul para los productos */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+/* Efecto cuando el usuario pasa el mouse sobre los productos */
+.product-button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+/* Estilos adicionales para mejorar la apariencia de las opciones */
+.buttons-container {
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para que los botones se apilen */
+    gap: 15px; /* Espacio entre los botones */
+    padding: 15px 0;
+}
+
+.buttons-container .option-button,
+.buttons-container .category-button,
+.buttons-container .product-button {
+    width: 100%; /* Botones ocupan todo el ancho disponible */
+}
+

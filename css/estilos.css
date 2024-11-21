@@ -1,0 +1,90 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container for the payment form */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    color: #2d3e50;
+    margin-bottom: 20px;
+}
+
+/* Display the payment info */
+.payment-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+/* Style for the form elements */
+input[type="hidden"] {
+    display: none;
+}
+
+/* Style for the payment button */
+#payButton {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Change button color on hover */
+#payButton:hover {
+    background-color: #45a049;
+}
+
+/* Error message style */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Make sure everything is responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    .payment-info {
+        font-size: 14px;
+    }
+}

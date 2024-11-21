@@ -1,0 +1,213 @@
+.view_page {
+    padding: 5% 8%;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.view_page form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+/* Responsividad para pantallas grandes */
+@media (min-width: 1200px) {
+    .view_page form {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .view_page form img {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+        .view_page form .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 150px;
+            padding-left: 200px; /* Agrega un margen izquierdo si lo deseas */
+        }
+
+        .view_page form .name,
+        .view_page form .price,
+        .view_page form .product-detail {
+            text-align: left; /* Puedes cambiarlo a 'center' si prefieres centrarlo */
+            width: 100%; /* Asegura que el contenido ocupe todo el espacio disponible */
+        }
+}
+.view_page form:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.view_page form img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Diseño predeterminado (para pantallas pequeñas) */
+.view_page form .detail {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.view_page form .name {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #bba145f1;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.view_page form .price {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.view_page form .product-detail {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Efecto 3D en la imagen cuando se hace hover */
+.view_page form img:hover {
+    transform: scale(1.05) rotateY(10deg) rotateX(10deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Título del producto */
+.view_page form .name {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #bba145f1; /* Color verde más brillante */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Precio */
+.view_page form .price {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Descripción del producto */
+.view_page form .detail {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Botones de acción */
+.view_page form .button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.view_page form .btn {
+    background-color: #bba145f1; /* Botón verde */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.view_page form .btn:hover {
+    background-color: #bba145f1;
+    transform: scale(1.05);
+}
+
+.cart-total .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-total .button .btn {
+    margin: 1rem;
+}
+
+
+/* Responsividad para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+    .view_page form {
+        padding: 1.5rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .view_page form img {
+        max-width: 90%;
+        margin-bottom: 1.5rem;
+    }
+
+    .view_page form .name {
+        font-size: 1.8rem;
+    }
+
+    .view_page form .price {
+        font-size: 20px;
+    }
+
+    .view_page form .detail {
+        font-size: 14px;
+    }
+}
+
+/* Mejoras para pantallas muy grandes */
+@media (min-width: 1200px) {
+    .view_page form {
+        grid-template-columns: 1fr 1fr;
+        justify-items: flex-start;
+        gap: 2rem;
+    }
+
+    .view_page form img {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .view_page form .detail {
+        font-size: 18px;
+    }
+}
+

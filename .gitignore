@@ -1,0 +1,12 @@
+# Ignorar la carpeta vendor, donde están las dependencias de Composer
+/vendor/
+
+# Ignorar el archivo .env, donde guardas variables sensibles (como credenciales de la base de datos)
+.env
+
+# Ignorar archivos temporales de IDEs
+.idea/
+.vscode/
+
+# Ignorar archivos de log
+*.log

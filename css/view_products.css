@@ -1,0 +1,149 @@
+/*Seccion del menu para guia*/
+
+/* Estilo del menú */
+/* Estilo del menú */
+.menu {
+    display: flex;
+    justify-content: center; /* Centra el contenedor horizontalmente */
+    align-items: center; /* Centra el contenedor verticalmente */
+    height: 20vh; /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+}
+
+.menu nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.menu nav ul li {
+    margin: 0 1rem;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu nav ul li a:hover,
+.menu nav ul li a.active {
+    background-color: #bba145f1;
+    color: white;
+}
+
+
+/* Centrado del contenedor principal */
+.products {
+    width: 90%;  /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 1200px;  /* Limita el tamaño máximo */
+    margin: 0 auto;  /* Centrado horizontal */
+}
+
+/* Estilo de las categorías (páginas) */
+.products .category {
+    display: none; /* Inicialmente todas las categorías están ocultas */
+    transition: opacity 0.3s ease-in-out;
+    padding: 2rem;
+}
+
+.products .category h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contenedor de los productos con espaciado aumentado */
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Se ajusta al tamaño disponible */
+    gap: 2.6rem;  /* Aumenta el espacio entre los productos */
+    justify-items: center;
+    padding: 2rem 0; /* Espacio superior e inferior */
+}
+
+.products .box-container .box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.products .box-container .box:hover {
+    transform: translateY(-5px);
+}
+
+.products .box-container .box .img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.products .box-container .box .name {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.products .box-container .box .price {
+    font-size: 1.3rem;
+    color: #bba145f1;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.products .box-container .box .btn {
+    display: block;
+    width: 100%;
+    background-color: #bba145f1;
+    color: #fff;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.products .box-container .box .btn:hover {
+    background-color: #bba145f1;
+}
+
+.products .box-container .box .product-detail {
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 0 0 8px 8px;
+    font-size: 1rem;
+    color: #666;
+    display: none;
+}
+
+.products .box-container .box .btn.show-detail {
+    display: block;
+    margin-top: 1rem;
+}
+
+.products .box-container .box:hover .product-detail {
+    display: block;
+}

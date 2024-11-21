@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --green : #002539;
+  --light-greeen: #fff;
+  --box-shadow: 0 0 10px rgba(0 0 0/15%);
+}
+html{
+  font-size: 16px;
+  -ms-overflow-style: scrollbar;
+  -webkkit-tab-highlight-color: transparent;
+  font-family: sans-serif;
+  --ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: #fff; /* Cambiado a un fondo blanco */
+  width: 100%;
+}
+
+
+a{
+  text-decoration: none;
+}
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 2;
+}
+.title p{
+  text-transform: capitalize;
+}
+.title .logo{
+  width: 100px;
+}
+ul{
+  list-style: none;
+}
+sup{
+  position: absolute;
+  top: 15%;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 15px;
+  text-align: center;
+  padding: 1rem;
+}
+.empty{
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 59%;
+  padding: .5rem 1.5rem;
+  border-radius: 5px;
+  background: var(--light-greeen);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+.btn{
+  line-height: 2;
+  background-color: #bba145f1;
+  padding: 5px 35px;
+  display: inline-block;
+  border-radius: 30px;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+.btn::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background: var(--green);
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn:hover::before{
+  width: 100%;
+}
+label{
+  text-transform: capitalize;
+}
+input,
+textarea{
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: .6rem;
+  box-shadow: var(--box-shadow);
+  margin: .5rem 0;
+  border: 1px solid var(--green);
+  width: 100%;
+}
+button{
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.banner {
+  background-image: url('img/cafe7.jpg'); /* Ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh; /* Ajusta la altura según necesites */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Asegura la posición para que el texto quede dentro */
+}
+
+.banner h1 {
+  text-transform: uppercase;
+  color: #fff; /* Texto blanco para que sea legible sobre la imagen */
+  font-size: 3rem; /* Ajusta el tamaño del texto */
+  background: none; /* Elimina cualquier fondo previo */
+  padding: 0; /* Elimina los espacios adicionales */
+  margin: 0; /* Ajusta el margen si es necesario */
+}
+
+.title2{
+  border-top: 1px solid var(--green);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  box-shadow: var(--box-shadow);
+}
+.title2 a{
+  color: var(--green);
+}
+
+/* -----------media screen----------- */
+@media (max-width: 991px) {
+    #menu-btn {
+      display: block;
+    }
+  
+    .header .flex .navbar {
+      position: absolute;
+      width: 100%;
+      padding: 0 2rem;
+      top: 130%;
+      left: 0;
+      display: block;
+      right: 0;
+      border-top: 1px solid var(--green);
+      background: #fff;
+      transition: .3s ease;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    .header .flex .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  
+    .header .flex .navbar a {
+      display: block;
+      margin: 2rem;
+    }
+  }
+  
+  .form-container {
+    width: 100%;
+  }
+  form{
+    width: 100%;
+  }
+  
